@@ -1,0 +1,60 @@
+#ifndef FUNCTION_H
+#define FUNCTION_H
+
+#include <iostream>
+#include <Windows.h>
+#include <conio.h>
+using namespace std;
+
+#ifdef INTEGER
+void RandArrayInt(int*, int);
+void ShowArrayInt(int*, int);
+int MinArrayInt(int*, int);
+int MaxArrayInt(int*, int);
+void SortArrayInt(int*, int);
+void EditArrayInt(int*, int, int);
+
+#define Type int
+#define RandArray RandArrayInt
+#define ShowArray ShowArrayInt
+#define MinArray MinArrayInt
+#define MaxArray MaxArrayInt
+#define SortArray SortArrayInt
+#define EditArray EditArrayInt
+#endif
+
+#ifdef DOUBLE
+void RandArrayDouble(double*, int);
+void ShowArrayDouble(double*, int);
+double MinArrayDouble(double*, int);
+double MaxArrayDouble(double*, int);
+void SortArrayDouble(double*, int);
+void EditArrayDouble(double*, int, double);
+
+#define Type double
+#define RandArray RandArrayDouble
+#define ShowArray ShowArrayDouble
+#define MinArray MinArrayDouble
+#define MaxArray MaxArrayDouble
+#define SortArray SortArrayDouble
+#define EditArray EditArrayDouble
+#endif
+
+#ifdef CHAR
+void RandArrayChar(char*, int);
+void ShowArrayChar(char*, int);
+char MinArrayChar(char*, int);
+char MaxArrayChar(char*, int);
+void SortArrayChar(char*, int);
+void EditArrayChar(char*, int, char);
+
+#define Type char
+#define RandArray RandArrayChar
+#define ShowArray ShowArrayChar
+#define MinArray MinArrayChar
+#define MaxArray MaxArrayChar
+#define SortArray SortArrayChar
+#define EditArray EditArrayChar
+#endif
+
+#endif

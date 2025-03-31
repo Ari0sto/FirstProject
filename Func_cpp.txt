@@ -1,0 +1,153 @@
+#include "function.h"
+#include <cstdlib>
+#include <Windows.h>
+#include <conio.h>
+
+// Функції для цілих чисел
+void RandArrayInt(int* mas, int n) {
+    for (int i = 0; i < n; i++) {
+        mas[i] = rand() % 21;
+    }
+}
+
+// Вивід масиву
+void ShowArrayInt(int* mas, int n) {
+    for (int i = 0; i < n; i++) {
+        cout << mas[i] << "\t";
+    }
+    cout << "\n";
+}
+
+// Пошук мінімального значення
+int MinArrayInt(int* mas, int n) {
+    int min = mas[0];
+    for (int i = 1; i < n; i++) {
+        if (mas[i] < min) {
+            min = mas[i];
+        }
+    }
+    return min;
+}
+
+// Пошук максимального значення
+int MaxArrayInt(int* mas, int n) {
+    int max = mas[0];
+    for (int i = 1; i < n; i++) {
+        if (mas[i] > max) {
+            max = mas[i];
+        }
+    }
+    return max;
+}
+
+// Сортування
+void SortArrayInt(int* mas, int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (mas[j] > mas[j + 1]) {
+                swap(mas[j], mas[j + 1]);
+            }
+        }
+    }
+}
+
+// Заміна значення (Редагування)
+void EditArrayInt(int* mas, int index, int value) {
+    mas[index] = value;
+}
+
+// Функції для дійсних чисел
+void RandArrayDouble(double* mas, int n) {
+    for (int i = 0; i < n; i++) {
+        mas[i] = rand() / 32767.0 * 20;
+    }
+}
+
+void ShowArrayDouble(double* mas, int n) {
+    for (int i = 0; i < n; i++) {
+        cout << mas[i] << "\t";
+    }
+    cout << "\n";
+}
+
+double MinArrayDouble(double* mas, int n) {
+    double min = mas[0];
+    for (int i = 1; i < n; i++) {
+        if (mas[i] < min) {
+            min = mas[i];
+        }
+    }
+    return min;
+}
+
+double MaxArrayDouble(double* mas, int n) {
+    double max = mas[0];
+    for (int i = 1; i < n; i++) {
+        if (mas[i] > max) {
+            max = mas[i];
+        }
+    }
+    return max;
+}
+
+void SortArrayDouble(double* mas, int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (mas[j] > mas[j + 1]) {
+                swap(mas[j], mas[j + 1]);
+            }
+        }
+    }
+}
+
+void EditArrayDouble(double* mas, int index, double value) {
+    mas[index] = value;
+}
+
+// Функції для символьного масива
+void RandArrayChar(char* mas, int n) {
+    for (int i = 0; i < n; i++) {
+        mas[i] = 'A' + rand() % 26;
+    }
+}
+
+void ShowArrayChar(char* mas, int n) {
+    for (int i = 0; i < n; i++) {
+        cout << mas[i] << "\t";
+    }
+    cout << "\n";
+}
+
+char MinArrayChar(char* mas, int n) {
+    char min = mas[0];
+    for (int i = 1; i < n; i++) {
+        if (mas[i] < min) {
+            min = mas[i];
+        }
+    }
+    return min;
+}
+
+char MaxArrayChar(char* mas, int n) {
+    char max = mas[0];
+    for (int i = 1; i < n; i++) {
+        if (mas[i] > max) {
+            max = mas[i];
+        }
+    }
+    return max;
+}
+
+void SortArrayChar(char* mas, int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (mas[j] > mas[j + 1]) {
+                swap(mas[j], mas[j + 1]);
+            }
+        }
+    }
+}
+
+void EditArrayChar(char* mas, int index, char value) {
+    mas[index] = value;
+}

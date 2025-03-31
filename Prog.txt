@@ -1,0 +1,29 @@
+#define CHAR  // Або ж #define DOUBLE / #define CHAR
+
+#include "function.h"
+#include <Windows.h>
+#include <conio.h>
+
+
+int main() {
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251); //Для роботи укр мовою
+    const int size = 10;
+    Type arr[size];
+
+    RandArray(arr, size);
+    ShowArray(arr, size);
+
+    cout << "Мін: " << MinArray(arr, size) << endl;
+    cout << "Макс: " << MaxArray(arr, size) << endl;
+
+    SortArray(arr, size);
+    cout << "Відсортований масив: ";
+    ShowArray(arr, size);
+
+    cout << "Змінений масив (замість 6, нове значення 77)\n";
+    EditArray(arr, 5, 77);
+    ShowArray(arr, size);
+
+    return 0;
+}
